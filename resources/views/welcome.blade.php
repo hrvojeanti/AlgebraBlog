@@ -6,16 +6,9 @@
 
     </head>
     <body>
-        <h2>Dobro Došli!</h2>
-        @foreach($items as $item)
+        <h2><a href="items">Dobro Došli na Algebra Blog!</a></h2>
+       
 
-            <a href="/item/{{ $item->id }}">
 
-            {{ $item->title }} 
-
-        </a>
-            <br />
-
-        @endforeach
     </body>
 </html>
