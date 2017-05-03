@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use DB;
+
 class ItemsController extends Controller
 {
     /**
@@ -14,6 +16,9 @@ class ItemsController extends Controller
     public function index()
     {
         //
+
+        $items = DB::table('items')->get();
+        return view('items.index', compact('items'));
     }
 
     /**
@@ -46,6 +51,8 @@ class ItemsController extends Controller
     public function show($id)
     {
         //
+        $item = DB::table('items')->find($id);
+        return view('items.show', compact('item'));
     }
 
     /**
