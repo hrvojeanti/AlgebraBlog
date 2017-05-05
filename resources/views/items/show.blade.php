@@ -10,8 +10,10 @@
 
 
 	        <div>{{ $item->content }}</div>
-        
-
+	        @if ( auth()->id() == $item->user_id )
+	        <a href={{ url('item/'.$item->id.'/del')}} class="btn btn-danger">Delete</a>
+	        @endif
+	    </form>
         </div>
     </div>
 </div>
