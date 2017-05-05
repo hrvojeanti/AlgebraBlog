@@ -10,6 +10,13 @@ use App\Item;
 
 class ItemsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['index', 'show']); // provjera radi upisa u tablice jel si logiran, except je za one methode koje ne zelimo zastitu
+    }
+
+
+
     /**
      * Display a listing of the resource.
      *
