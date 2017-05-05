@@ -1,17 +1,16 @@
-<!DOCTYPE html>
-<html lang="hr">
-    <head>
-       	<meta charset="utf-8">
-        <title>Algebra blog</title>
+@extends('layouts.app')
 
-    </head>
-    <body>
-
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
 
 	    	<h2> {{ $item->title }} </h2>
 
 	        <div>{{ $item->content }}</div>
         
 
-    </body>
-</html>
+        </div>
+    </div>
+</div>
+@endsection
